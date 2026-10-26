@@ -1,0 +1,25 @@
+# Equity universe of the FidMAS evaluation (22 securities).
+
+securities:
+  - {ticker: "AAPL US Equity"}
+  - {ticker: "AMZN US Equity"}
+  - {ticker: "BAC US Equity"}
+  - {ticker: "CAT US Equity"}
+  - {ticker: "CVX US Equity"}
+  - {ticker: "GS US Equity"}
+  - {ticker: "HD US Equity"}
+  - {ticker: "INTC US Equity"}
+  - {ticker: "JNJ US Equity"}
+  - {ticker: "JPM US Equity"}
+  - {ticker: "KO US Equity"}
+  - {ticker: "LLY US Equity"}
+  - {ticker: "MCD US Equity"}
+  - {ticker: "META US Equity"}
+  - {ticker: "MSFT US Equity"}
+  - {ticker: "NVDA US Equity"}
+  - {ticker: "PFE US Equity"}
+  - {ticker: "PG US Equity"}
+  - {ticker: "T US Equity"}
+  - {ticker: "TSLA US Equity"}
+  - {ticker: "WMT US Equity"}
+  - {ticker: "XOM US Equity"}

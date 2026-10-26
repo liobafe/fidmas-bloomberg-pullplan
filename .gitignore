@@ -1,0 +1,13 @@
+# Licensed data: never commit
+data/
+*.parquet
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+!pull/excel_bdh_formulas.csv
+
+# Local environment and secrets
+.env
+.venv/
+__pycache__/

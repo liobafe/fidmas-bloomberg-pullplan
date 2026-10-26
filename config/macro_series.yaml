@@ -1,0 +1,25 @@
+# Macro and market-context series (16). The evaluation uses PX_LAST of every
+# series. Other delivered fields are listed but unused.
+#
+# publication_lag: rule that sets available_from
+#   none                               available_from = date (market close)
+#   [business_days, n]                 date + n business days
+#   [month_end_plus_calendar_days, n]  reference month end + n calendar days
+
+series:
+  - {ticker: "VIX Index",               fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "MOVE Index",              fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "USYC2Y10 Index",          fields: [PX_LAST, PX_HIGH, PX_LOW, PX_VOLUME], cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "DXY Curncy",              fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "BFCIUS Index",            fields: [PX_LAST, PX_HIGH, PX_LOW, PX_VOLUME], cadence: daily,   publication_lag: [business_days, 1],                role: "allocator context"}
+  - {ticker: "CESIUSD Index",           fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: [business_days, 1],                role: "allocator context"}
+  - {ticker: "HYG US Equity",           fields: [PX_LAST, PX_HIGH, PX_LOW, PX_VOLUME], cadence: daily,   publication_lag: none,                              role: "allocator context (market proxy, not investable)"}
+  - {ticker: "GLD US Equity",           fields: [PX_LAST, PX_HIGH, PX_LOW, PX_VOLUME], cadence: daily,   publication_lag: none,                              role: "allocator context (market proxy, not investable)"}
+  - {ticker: "CL1 Comdty",              fields: [PX_LAST, PX_HIGH, PX_LOW, PX_VOLUME], cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "FEDL01 Index",            fields: [PX_LAST, PX_HIGH, PX_LOW, PX_VOLUME], cadence: daily,   publication_lag: [business_days, 1],                role: "allocator context; risk-free rate"}
+  - {ticker: "CPI YOY Index",           fields: [PX_LAST],                             cadence: monthly, publication_lag: [month_end_plus_calendar_days, 20], role: "allocator context"}
+  - {ticker: "V2X Index",               fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "CDX IG CDSI GEN 5Y Corp", fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "BCOM Index",              fields: [PX_LAST, PX_HIGH, PX_LOW],            cadence: daily,   publication_lag: none,                              role: "allocator context"}
+  - {ticker: "USGG3M Index",            fields: [PX_LAST],                             cadence: monthly, publication_lag: none,                              role: "allocator context"}
+  - {ticker: "USGG10YR Index",          fields: [PX_LAST],                             cadence: monthly, publication_lag: none,                              role: "allocator context"}

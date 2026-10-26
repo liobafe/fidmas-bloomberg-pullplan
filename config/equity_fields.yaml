@@ -1,0 +1,33 @@
+# Equity fields pulled for all 22 securities (22 fields).
+#
+# category:     price | fundamental | analyst | sentiment | other
+# periodicity:  periodicity of the BDH request
+# availability: rule that sets available_from
+#   same_day             available_from = date
+#   period_end_plus_45d  available_from = date + 45 calendar days (date = period end)
+#   date_plus_10d        available_from = date + 10 calendar days
+# used:         whether the paper's evaluation uses the field
+
+fields:
+  - {mnemonic: PX_OPEN,                     category: price,       periodicity: DAILY,     availability: same_day,            used: no}
+  - {mnemonic: PX_HIGH,                     category: price,       periodicity: DAILY,     availability: same_day,            used: no}
+  - {mnemonic: PX_LOW,                      category: price,       periodicity: DAILY,     availability: same_day,            used: no}
+  - {mnemonic: PX_LAST,                     category: price,       periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: PX_VOLUME,                   category: price,       periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: BETA_ADJ_OVERRIDABLE,        category: other,       periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: AVERAGE_BID_ASK_SPREAD,      category: other,       periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: SHORT_INT,                   category: other,       periodicity: DAILY,     availability: date_plus_10d,       used: yes}
+  - {mnemonic: NEWS_SENTIMENT_DAILY_AVG,    category: sentiment,   periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: NEWS_PUBLICATION_COUNT,      category: sentiment,   periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: TWITTER_SENTIMENT_DAILY_AVG, category: sentiment,   periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: TOT_BUY_REC,                 category: analyst,     periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: TOT_SELL_REC,                category: analyst,     periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: BEST_TARGET_PRICE,           category: analyst,     periodicity: DAILY,     availability: same_day,            used: yes}
+  - {mnemonic: BEST_EPS,                    category: analyst,     periodicity: DAILY,     availability: same_day,            used: no}
+  - {mnemonic: EBITDA,                      category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
+  - {mnemonic: SALES_REV_TURN,              category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
+  - {mnemonic: OPER_MARGIN,                 category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
+  - {mnemonic: RETURN_COM_EQY,              category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
+  - {mnemonic: TOT_DEBT_TO_TOT_EQY,         category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
+  - {mnemonic: PE_RATIO,                    category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
+  - {mnemonic: PX_TO_BOOK_RATIO,            category: fundamental, periodicity: QUARTERLY, availability: period_end_plus_45d, used: yes}
